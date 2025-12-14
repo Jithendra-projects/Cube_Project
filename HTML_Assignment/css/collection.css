@@ -1,0 +1,255 @@
+/* =========================
+   OUR COLLECTION SECTION
+========================= */
+
+.collection-section {
+  width: 100%;
+  padding: 110px 0;
+}
+
+.collection-wrapper {
+  width: 1328px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 520px 1fr;
+  gap: 80px;
+  align-items: center;
+}
+
+/* -------------------------
+   LEFT SIDE
+------------------------- */
+
+.collection-left {
+  display: flex;
+  flex-direction: column;
+}
+
+.section-title {
+  font-size: 36px;
+  font-weight: 600;
+  color: #032E15;
+  margin-bottom: 24px;
+  font-family: "Inter";
+}
+
+
+.accordion {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.accordion-item {
+  width: 626px;
+  border: 1px solid #e6e6e6;
+  border-radius: 8px;
+  background: #ffffff;
+  overflow: hidden;
+  transition: all 0.3s ease;
+}
+
+.accordion-item:not(.active) .accordion-header {
+  height: 72px;
+  padding: 24px 32px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.accordion-item:not(.active) .accordion-content {
+  max-height: 0;
+  padding: 0 32px;
+  overflow: hidden;
+}
+
+
+.accordion-item.active {
+  height: 167px;
+}
+
+.accordion-item.active .accordion-header {
+  padding: 24px 32px 12px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.accordion-item.active .accordion-content {
+  max-height: 100px; 
+  padding: 0 32px 24px;
+}
+
+/* Header */
+.accordion-header {
+  width: 100%;
+  background: transparent;
+  border: none;
+  outline: none;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 18px 20px;
+  cursor: pointer;
+  font-family: "Inter", sans-serif;
+  font-size: 15px;
+  font-weight: 600;
+  color: #032E15;
+}
+.accordion-header span{
+    font-weight: 700;
+    font-size: 20px;
+    letter-spacing: 0px;
+    font-family: "Inter";
+}
+
+.accordion-header .icon {
+  font-size: 18px;
+  font-weight: 500;
+  color: #032E15;
+}
+
+
+.accordion-content {
+  max-height: 0;
+  overflow: hidden;
+  padding: 0 20px;
+  transition: max-height 0.3s ease, padding 0.3s ease;
+}
+
+.accordion-content p {
+  font-size: 16px;
+  font-weight: 300;
+  color: #666666;
+  line-height: 1.5;
+  padding-bottom: 18px;
+  letter-spacing: 0px;
+}
+
+
+.accordion-item.active .accordion-content {
+  max-height: 120px; 
+  padding-top: 8px;
+}
+
+/* -------------------------
+   RIGHT SIDE IMAGE
+------------------------- */
+
+.collection-right {
+  width: 590px;
+  height: 711px;
+  margin-left: 110px;
+}
+
+.collection-right img {
+  width: 590px;
+  height: 711px;
+  object-fit: cover;          
+  border-radius: 30px;
+  display: block;
+}
+
+
+/*------------- TABLET RESPONSIVE --------*/
+@media (max-width: 1023px) {
+
+  .collection-section {
+    padding: 80px 0;
+  }
+
+  .collection-wrapper {
+    width: 100%;
+    grid-template-columns: 1fr;
+    gap: 60px;
+    padding: 0 24px;
+  }
+
+
+  .collection-left {
+    width: 100%;
+  }
+
+  .section-title {
+    font-size: 32px;
+    margin-bottom: 20px;
+  }
+
+  .accordion-item {
+    width: 100%;
+  }
+
+
+  .collection-right {
+    width: 100%;
+    height: auto;
+    margin-left: 0;
+    display: flex;
+    justify-content: center;
+  }
+
+  .collection-right img {
+    width: 100%;
+    max-width: 520px;
+    height: auto;
+    border-radius: 24px;
+  }
+}
+
+
+/*-------------MOBILE RESPONSIVE----------*/
+@media (max-width: 767px) {
+
+  .collection-section {
+    padding: 60px 0;
+  }
+
+  .collection-wrapper {
+    width: 100%;
+    grid-template-columns: 1fr;
+    gap: 40px;
+    padding: 0 16px;
+  }
+
+
+  .section-title {
+    font-size: 26px;
+    margin-bottom: 16px;
+  }
+
+
+  .accordion {
+    gap: 12px;
+  }
+
+  .accordion-item {
+    width: 100%;
+  }
+
+  .accordion-header {
+    padding: 18px 20px;
+  }
+
+  .accordion-header span {
+    font-size: 16px;
+  }
+
+  .accordion-content p {
+    font-size: 14px;
+    line-height: 1.45;
+  }
+
+ 
+  .collection-right {
+    width: 100%;
+    height: auto;
+    margin-left: 0;
+  }
+
+  .collection-right img {
+    width: 100%;
+    height: auto;
+    border-radius: 20px;
+  }
+}
+

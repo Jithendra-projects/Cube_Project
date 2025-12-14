@@ -1,0 +1,87 @@
+.stats-section {
+  width: 100%;
+  height: 201.25px;
+  background: linear-gradient(180deg, #032E15 0%, #016630 100%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: -30px;
+}
+
+.stats-container {
+  width: 100%;
+  max-width: 1328px;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  text-align: center;
+  gap: 19.21px;
+}
+
+.stats-section .stat-item .percentage {
+  color: #ffffff !important;
+  font-family: "Inter";
+  font-size: 40px;
+  font-weight: 700;
+  margin-bottom: 8px;
+
+}
+.stat-item .stat-text {
+  color: #ffffff;
+  opacity: 0.9;
+  font-family: "Inter";
+  font-size: 16px;
+  font-weight: 300;
+  letter-spacing: 0px;
+  line-height: 100%;
+}
+
+/* ===== TABLET RESPONSIVE===== */
+@media (max-width: 1024px) {
+
+  .stats-section {
+    height: auto;
+    padding: 32px 24px;
+    margin-top: -20px;
+  }
+
+  .stats-container {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 28px;
+  }
+
+  .stats-section .stat-item .percentage {
+    font-size: 32px;
+    margin-bottom: 6px;
+  }
+
+  .stat-item .stat-text {
+    font-size: 15px;
+    line-height: 1.4;
+  }
+}
+
+/* =====  MOBILE RESPONSIVE ===== */
+@media (max-width: 767px) {
+
+  .stats-section {
+    height: auto;
+    padding: 28px 16px;
+    margin-top: 0; 
+  }
+
+  .stats-container {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+
+  .stats-section .stat-item .percentage {
+    font-size: 28px;
+    margin-bottom: 4px;
+  }
+
+  .stat-item .stat-text {
+    font-size: 14px;
+    line-height: 1.5;
+    opacity: 0.85;
+  }
+}
